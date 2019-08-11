@@ -2,6 +2,8 @@
 
 In this lecture we talk about Top Level Middleware, Using Postman, and using Axios in our API.
 
+Examples can be found inside the `.js` files of this repo.
+
 ## Top Level Middleware
 
 `Top Level Middleware` is the term we use to refer to some logic that will be executed upon every request that is made to our API.
@@ -55,3 +57,32 @@ Now your API is setup to follow the `CORS` protocol.
 ## Postman
 
 `Postman` is a suite that we can use to act as a `client` to interact with the `API` that we build.
+
+The browser, by default, will only let us make `get` requests from the URL. So we can use `postman` to test out a `full CRUD API`.
+
+## Full CRUD API
+
+So far we have built an API that has only allowed `get` requests to be made. We need to also allow `post`, `put`, and `delete` requests to be made to become a `full CRUD API`.
+
+POST:
+```js
+app.post('path for the endpoint', handlerFunc)
+```
+
+PUT:
+```js
+app.put('path for the endpoint', handlerFunc)
+```
+
+DELETE:
+```js
+app.delete('path for the endpoint', handlerFunc)
+```
+
+We now have a "fully funcitonal" API because are following the full CRUD pattern.
+
+## Controller
+
+A `controller` is what we can use to store all of our functions that we use to handle the requests being made.
+
+We usually will create a seperate javascript file that will hold the controller functions.
